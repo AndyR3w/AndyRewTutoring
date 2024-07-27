@@ -1,8 +1,8 @@
 body{
-    background-color: blue;
+    background-color: hsl(44, 100%, 94%);
 }
 header{
-    background-color: red;
+    background-color: hsl(0, 0%, 100%);
 }
 .briefDescription{
     background-color:aquamarine;
