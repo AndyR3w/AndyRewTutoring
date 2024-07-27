@@ -1,0 +1,14 @@
+body{
+    background-color: blue;
+}
+header{
+    background-color: red;
+}
+.briefDescription{
+    background-color:aquamarine;
+}
+hr{
+    background-color: black;
+    border: 0px;
+    height: 4px;
+}
