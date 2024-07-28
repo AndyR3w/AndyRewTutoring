@@ -1,8 +1,8 @@
 body{
-    background-color: hsl(44, 100%, 94%);
+    background-color: hsl(190, 16%, 85%);
 }
 header{
-    background-color: "";
+    background-color: rgb(255, 255, 255);
     
 }
 .briefDescription{
@@ -12,4 +12,23 @@ hr{
     background-color: black;
     border: 0px;
     height: 4px;
+}
+.centered-text{
+    text-align: center;
+}
+.centered-video{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h1-button{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 50%;
+    
+}
+.h1-button:hover {
+    background-color: #b5b5b5;
 }
