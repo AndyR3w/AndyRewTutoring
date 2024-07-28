@@ -21,14 +21,18 @@ hr{
     margin-left: auto;
     margin-right: auto;
 }
-.h1-button{
+.h1-buttonwee{
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 50px;
-    width: 50%;
-    
+    font-size: 18px; /* Adjust the font size */
+    padding: 10px 20px; /* Adjust the padding (top-bottom and left-right) */
+    width: 200px; /* Adjust the width */
+    height: 50px; /* Adjust the height */
+    border: none; /* Optional: remove the border if needed */
+    background-color: #4CAF50; /* Optional: set background color */
+    color: white; /* Optional: set text color */
+    cursor: pointer;
 }
-.h1-button:hover {
+/*
+.h1-buttonwee:hover {
     background-color: #b5b5b5;
 }
