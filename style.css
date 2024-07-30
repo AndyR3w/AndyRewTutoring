@@ -1,9 +1,21 @@
+:root {
+	/* the "h" prefix means header section*/
+	--hBackgroundColor: #f2f2f2;
+	--hHoverColor: #7e77ff77;
+}
+
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('./fonts/NanumGothic-Bold.ttf') format('truetype');
+}
+
 body{
-    background-color: hsl(190, 16%, 85%);
+    background-color: #d3dddf;
+	margin: 0;
+	padding: 0;
 }
 header{
-    background-color: rgb(255, 255, 255);
-    
+    background-color: var(--hBackgroundColor);
 }
 .briefDescription{
     background-color:aquamarine;
@@ -28,14 +40,28 @@ hr{
 	text-decoration:none;
 	text-shadow:0px 1px 0px #263666;
 }
-.h1-button:hover {
-	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-	background-color:#415989;
-}
-.h1-button:active {
-	position:relative;
-	top:1px;
+	.h1-button:hover {
+		background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+		background-color:#415989;
+	}
+	.h1-button:active {
+		position:relative;
+		top:1px;
 }
 .centerOnScreen{
     text-align: center;
 }
+.whiteBackButton{
+	border: 0px;
+	background-color: var(--hBackgroundColor);
+	border-radius: 1em;
+	padding: 10px;
+}
+	.whiteBackButton:hover{
+		background-color: var(--hHoverColor);
+	}
+	.whiteBackButton:active{
+		position:relative;
+		top:2px;
+	}
+/* Make the text turn white or black when hovering */
