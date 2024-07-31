@@ -1,7 +1,9 @@
 :root {
 	/* the "h" prefix means header section*/
-	--hBackgroundColor: #f2f2f2;
-	--hHoverColor: #7e77ff77;
+	--hBackgroundColorWhite: #f2f2f2;
+	--hHoverColorWhite: #7e77ff77;
+	--hBackgroundColorBlue: #1414ffd5;
+	--hHoverColorBlue: #0202ded5;
 }
 
 @font-face {
@@ -15,7 +17,10 @@ body{
 	padding: 0;
 }
 header{
-    background-color: var(--hBackgroundColor);
+    background-color: var(--hBackgroundColorWhite);
+}
+a{
+	text-decoration: none;
 }
 .briefDescription{
     background-color:aquamarine;
@@ -53,15 +58,34 @@ hr{
 }
 .whiteBackButton{
 	border: 0px;
-	background-color: var(--hBackgroundColor);
+	background-color: var(--hBackgroundColorWhite);
 	border-radius: 1em;
 	padding: 10px;
 }
 	.whiteBackButton:hover{
-		background-color: var(--hHoverColor);
+		background-color: var(--hHoverColorWhite);
 	}
 	.whiteBackButton:active{
 		position:relative;
 		top:2px;
 	}
+.blueBackButton{
+	border: 0px;
+	background-color: var(--hBackgroundColorBlue);
+	border-radius: 1em;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: white;
+}
+	.blueBackButton:hover{
+		background-color: var(--hHoverColorBlue);
+		color: black;
+	}
+	.blueBackButton:active{
+		position:relative;
+		top:2px;
+	}
+
 /* Make the text turn white or black when hovering */
