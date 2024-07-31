@@ -2,7 +2,7 @@
 
 :root {
 	/* the "h" prefix means header section*/
-	--hBackgroundColorWhite: #f2f2f2;
+	--hBackgroundColorWhite: #ffffff;
 	--hHoverColorWhite: #7e77ff77;
 	--hBackgroundColorBlue: #1414ffd5;
 	--hHoverColorBlue: #0202ded5;
