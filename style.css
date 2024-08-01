@@ -1,7 +1,5 @@
 /* use 2 accent colors plus b&w. also only one font*/
-
 :root {
-	/* the "h" prefix means header section*/
 	--hBackgroundColorWhite: #ffffff;
 	--hHoverColorWhite: #7e77ff77;
 	--hBackgroundColorBlue: #1414ffd5;
@@ -14,65 +12,212 @@
     src: url('./fonts/NanumGothic-Bold.ttf') format('truetype');
 }
 
-body{
+body {
+	font-family: 'NanumGothic', Arial, Helvetica, sans-serif;
     background-color: var(--bodyBackground);
 	margin: 0;
 	padding: 0;
 }
-header{
+
+header {
     background-color: var(--hBackgroundColorWhite);
+	position: relative;
 }
-a{
+
+a {
 	text-decoration: none;
 }
-.briefDescription{
-    background-color:aquamarine;
+
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
 }
-hr{
+
+button {
+    max-width: 200px;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.hidden-on-small {
+    display: inline-block;
+}
+
+@media (max-width: 600px) {
+    .button-container .hidden-on-small {
+        display: none;
+    }
+
+    .hamburger1 {
+        display: grid; /* Show the hamburger menu */
+    }
+}
+
+@media (min-width: 601px) {
+    .button-container .hidden-on-small {
+        display: inline-block;
+    }
+
+    .hamburger1 {
+        display: none; /* Hide the hamburger menu */
+    }
+}
+
+/* ATTEMPT AT DROPDOWN BUTTON */
+.p-menu1 {
+    height: 100%;
+}
+
+/* Hamburger */
+.hamburger1 {
+    height: 22.5px;
+    width: 40px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    z-index: 120;
+    margin-top: 4px;
+}
+
+.hamburger1 div {
+    background-color: rgb(61, 61, 61);
+    position: relative;
+    width: 20px;
+    height: 2.5px;
+    margin-top: 3.5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#toggle1 {
+    display: none;
+}
+
+#toggle1:checked + .hamburger1 .top {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: 11.25px;
+}
+
+#toggle1:checked + .hamburger1 .meat {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: -5px;
+}
+
+#toggle1:checked + .hamburger1 .bottom {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+#toggle1:checked ~ .menu1 {
+    height: 340px;
+}
+
+/* Menu */
+.menu1 {
+    width: 100%;
+    background-color: #02173F;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr repeat(4, 0.5fr);
+    grid-row-gap: 25px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease;
+    z-index: 120;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.menu1 a:first-child {
+    margin-top: 40px;
+}
+
+.menu1 a:last-child {
+    margin-bottom: 40px;
+}
+
+.link1 {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0;
+    font: 700 20px 'Oswald', sans-serif;
+}
+
+.link1:hover {
+    background-color: #fff;
+    color: rgb(61, 61, 61);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/*END OF DROPDOWN ATTEMPT*/
+
+.briefDescription {
+    background-color: aquamarine;
+}
+
+hr {
     background-color: black;
     border: 0px;
     height: 4px;
 }
-.h1-button{
-    box-shadow:inset 0px 0px 15px 3px #23395e;
-	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-	background-color:#2e466e;
-	border-radius:30px;
-	border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:25px;
-	padding:12px 30px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+
+.h1-button {
+    box-shadow: inset 0px 0px 15px 3px #23395e;
+	background: linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color: #2e466e;
+	border-radius: 30px;
+	border: 1px solid #1f2f47;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 25px;
+	padding: 12px 30px;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #263666;
 }
-	.h1-button:hover {
-		background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-		background-color:#415989;
-	}
-	.h1-button:active {
-		position:relative;
-		top:1px;
+
+.h1-button:hover {
+	background: linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color: #415989;
 }
-.centerOnScreen{
+
+.h1-button:active {
+	position: relative;
+	top: 1px;
+}
+
+.centerOnScreen {
     text-align: center;
 }
-.whiteBackButton{
+
+.whiteBackButton {
 	border: 0px;
 	background-color: var(--hBackgroundColorWhite);
 	border-radius: 1em;
 	padding: 10px;
 }
-	.whiteBackButton:hover{
-		background-color: var(--hHoverColorWhite);
-	}
-	.whiteBackButton:active{
-		position:relative;
-		top:2px;
-	}
-.blueBackButton{
+
+.whiteBackButton:hover {
+	background-color: var(--hHoverColorWhite);
+}
+
+.whiteBackButton:active {
+	position: relative;
+	top: 2px;
+}
+
+.blueBackButton {
 	border: 0px;
 	background-color: var(--hBackgroundColorBlue);
 	border-radius: 1em;
@@ -82,13 +227,12 @@ hr{
 	padding-bottom: 10px;
 	color: white;
 }
-	.blueBackButton:hover{
-		background-color: var(--hHoverColorBlue);
-		color: black;
-	}
-	.blueBackButton:active{
-		position:relative;
-		top:2px;
-	}
 
-/* Make the text turn white or black when hovering */
+.blueBackButton:hover {
+	background-color: var(--hHoverColorBlue);
+}
+
+.blueBackButton:active {
+	position: relative;
+	top: 2px;
+}

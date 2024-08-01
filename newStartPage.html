@@ -10,14 +10,14 @@
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
         <div>
-            <h2 style="font-size: 20px; margin-left: 20px; font-family: NanumGothic, sans-serif;">tutoring</h2>
+            <h2 style="font-size: 20px; margin-left: 20px; font-family: NanumGothic, sans-serif;">&lt;placeholder&gt;</h2>
         </div>
-        <div style="text-align: right; margin-right: 20px">
+        <div style="text-align: right; margin-right: 20px" class="button-container">
             <a href="contactUs.html">
-                <button class="whiteBackButton" style="margin-right: 10px">Something</button>
+                <button class="whiteBackButton hidden-on-small" style="margin-right: 10px">&lt;Something&gt;</button>
             </a>
             <a href="aboutUs.html">
-                <button class="whiteBackButton" style="margin-right: 10px">Something Else</button>
+                <button class="whiteBackButton hidden-on-small" style="margin-right: 10px">&lt;Something Else&gt;</button>
             </a>
             <a href="homePage.html">
                 <button class="whiteBackButton" style="margin-right: 10px">Log In</button>
@@ -25,21 +25,50 @@
             <a href="index.html">
                 <button class="blueBackButton" style="font-weight: bold;">Enter</button>
             </a>
+            <!-- Dropdown Button --> <!-- Note, need to make it so that the header bar doesn't expand when this opens. Maybe that can be fixed in place-->
+                <section class="p-menu1">
+                    <nav id="navbar" class="navigation" role="navigation">
+                    <input id="toggle1" type="checkbox" />
+                    <label class="hamburger1" for="toggle1">
+                        <div class="top"></div>
+                        <div class="meat"></div>
+                        <div class="bottom"></div>
+                    </label>
+                    
+                    <nav class="menu1">
+                        <a class="link1" href="">Our Models</a>
+                        <a class="link1" href="">Specialties</a>
+                        <a class="link1" href="">About</a>
+                        <a class="link1" href="">Blog</a>
+                        <a class="lin1 kbutton-nav" href="">Contact</a>
+                    </nav>
+                </nav>
+                </section>
+                <!-- End of Test -->
+            
+
         </div>
     </header>
 
-
     <main>
-        <!-- REMOVE WHEN DONE -->
+        <!-- Switch Out Placeholder Image -->
         <div style="margin-left: 10px;">
-        <image class="centerOnScreen" width="300" src="./images/Inspiration.png"></image>
+        <img class="centerOnScreen" width="300" src="./images/Inspiration.png"></image>
         </div>
-        <!-- END OF REMOVE -->
+        <!-- END OF PLACEHOLDER -->
+        <div class="centerOnScreen">
+            <a href="index.html">
+                <button class="blueBackButton" style="font-weight: bold; font-size: 2em; border-radius: 0.65em; ;">Enter</button>
+            </a>
+        </div>
     </main>
+    
     
 
     <footer>
         
     </footer>
+
+    
 </body>
 </html>
